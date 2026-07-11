@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>不朽神話 裁縫之翼殞落之地</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="shell" aria-labelledby="site-title">
+      <div class="aura" aria-hidden="true"></div>
+
+      <nav class="section-nav">
+        <button class="section-tab is-active" type="button" data-view="story">故事</button>
+        <button class="section-tab" type="button" data-view="character">角色</button>
+        <button class="section-tab" type="button" data-view="achievement">成就</button>
+        <button class="section-tab" type="button" data-view="puzzle">解謎</button>
+      </nav>
+
+      <section class="view is-active" data-view-panel="story">
+        <div class="drag-viewport">
+          <div class="home drag-surface">
+            <div class="title-wrap">
+              <p>故事</p>
+              <h1 id="site-title">不朽神話 裁縫之翼殞落之地</h1>
+            </div>
+            <div class="story-grid" id="story-grid"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="view" data-view-panel="character">
+        <div class="drag-viewport">
+          <div class="collection-surface drag-surface">
+            <h2 class="view-title">角色</h2>
+            <div class="character-groups" id="character-grid"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="view" data-view-panel="achievement">
+        <div class="drag-viewport">
+          <div class="collection-surface drag-surface">
+            <h2 class="view-title">成就</h2>
+            <div class="collection-grid" id="achievement-grid"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="view" data-view-panel="puzzle">
+        <div class="drag-viewport">
+          <div class="collection-surface drag-surface puzzle-surface">
+            <h2 class="view-title">解謎</h2>
+            <div class="puzzle-grid" id="puzzle-grid"></div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <dialog class="modal" id="text-modal">
+      <div class="modal-body">
+        <button class="close" type="button" data-close>×</button>
+        <p class="modal-kicker" id="modal-type"></p>
+        <h2 id="modal-title"></h2>
+        <div class="modal-text" id="modal-text"></div>
+      </div>
+    </dialog>
+
+    <dialog class="character-modal" id="character-modal">
+      <div class="character-modal-body">
+        <button class="close" type="button" data-character-close>×</button>
+        <div class="character-hero" id="character-hero">
+          <div class="character-heading">
+            <p class="modal-kicker" id="character-group"></p>
+            <h2 id="character-name"></h2>
+          </div>
+        </div>
+        <div class="character-text" id="character-text"></div>
+      </div>
+    </dialog>
+
+    <dialog class="modal reward-modal" id="reward-modal">
+      <div class="modal-body">
+        <button class="close" type="button" data-reward-close>×</button>
+        <p class="modal-kicker" id="reward-type"></p>
+        <div class="modal-text" id="reward-text"></div>
+      </div>
+    </dialog>
+
+    <dialog class="character-entry-modal" id="character-person-modal">
+      <div class="character-entry-sheet">
+        <button class="close" type="button" data-person-close>×</button>
+        <h2 id="character-person-title">角色任務</h2>
+        <div class="character-entry-text" id="character-person-text"></div>
+      </div>
+    </dialog>
+
+    <dialog class="character-entry-modal" id="character-story-modal">
+      <div class="character-entry-sheet">
+        <button class="close" type="button" data-story-close>×</button>
+        <h2>角色故事</h2>
+        <div class="character-entry-text" id="character-story-text"></div>
+      </div>
+    </dialog>
+
+    <script src="app.js"></script>
+  </body>
+</html>
