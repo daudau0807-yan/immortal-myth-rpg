@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
     <title>不朽神話 裁縫之翼殞落之地</title>
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="styles.css?v=20260812-1" />
   </head>
   <body>
     <main class="shell" aria-labelledby="site-title">
@@ -109,6 +109,34 @@
       </div>
     </dialog>
 
+    <dialog class="final-failure-modal" id="final-failure-modal">
+      <div class="final-failure-sheet">
+        <p class="final-verdict">驗證失敗</p>
+        <h2>我賜予您的羽翼，僅剩回憶。</h2>
+        <p>錯誤的答案已斬斷你走過的痕跡。當門再次開啟，一切都將回到神話尚未開始之時。</p>
+        <button class="final-return-button" id="final-reset-confirm" type="button">回到初始</button>
+      </div>
+    </dialog>
+
+    <dialog class="final-success-modal" id="final-success-modal">
+      <div class="final-success-visual" aria-hidden="true"></div>
+      <div class="final-success-vignette" aria-hidden="true"></div>
+      <div class="final-success-copy">
+        <p>驗證通過</p>
+        <h2>魔王支線最終章</h2>
+        <strong>已解鎖</strong>
+        <button class="final-continue-button" id="final-success-close" type="button">繼續見證</button>
+      </div>
+    </dialog>
+
+    <dialog class="love-painting-modal" id="love-painting-modal">
+      <div class="love-painting-sheet">
+        <button class="close love-painting-close" type="button" data-love-painting-close>×</button>
+        <img src="assets/tumi-jiangfu-oil-painting.png" alt="降伏與荼蘼並肩沉睡在暮春花田的泛黃油畫" />
+        <p>我們總是在羨慕並嚮往著，我們所沒有的那些東西。</p>
+      </div>
+    </dialog>
+
     <dialog class="character-entry-modal" id="character-person-modal">
       <div class="character-entry-sheet">
         <button class="close" type="button" data-person-close>×</button>
@@ -125,6 +153,6 @@
       </div>
     </dialog>
 
-    <script src="app.js"></script>
+    <script src="app.js?v=20260822-answer-fill"></script>
   </body>
 </html>
